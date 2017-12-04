@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>航班列表展示</title>
+		<script type="text/javascript" src="${rc.contextPath}/script/jquery/jquery-1.9.1.min.js"></script>
+		
+		<script type="text/javascript">
+			
+			$(function(){
+				
+				var obj={};
+				obj.tpBody={picMsgCode:"adcfgrtttt"};
+				var tpQueryFlightReq=JSON.stringify(obj);
+				jQuery.ajax({
+					   type: "POST",
+					   url: "queryFlightList",
+					   dataType:"json",
+					   // 这一行至关重要，要不然页面会出现 Unsupported Media Type异常
+					   contentType: "application/json; charset=utf-8",
+					   data: tpQueryFlightReq,
+					   success: function(result){
+						     alert( "result: " + result.body.message.value );
+						     alert( "result: " + JSON.stringify(result) );
+					   }
+					});
+				
+			});
+		
+		</script>
+		
+		
+	</head>
+	<body>
+		
+		
+		
+	</body>
+</html>

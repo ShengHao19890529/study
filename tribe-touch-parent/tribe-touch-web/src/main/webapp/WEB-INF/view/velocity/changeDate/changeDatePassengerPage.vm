@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" href="${appPath}/resource/css/main.css" />
+		
+		<script type="text/javascript">
+			// 当前项目的路径
+			var appPath="${appPath}";
+		</script>
+
+	</head>
+	<body>
+		<header>
+			<!-- <span>变更申请</span> -->
+			
+		</header>
+		<div id="orderid" value="1000" style="display:none;"></div>
+		
+
+
+		<!-- <p class="blue-f">改期都为自愿改期（需要实际票面规则），如有特殊情况改期请致电川航客服，或前往机场柜台咨询。</p> -->
+		<p class="black-t">选择变更航班<span class="gray">请选择一个航班</span></p>
+
+		<div class="ticketinfo-bg-list" >
+			<div id="hblist">
+
+			</div>
+		</div>
+		
+		<p class="black-t">选择乘机人<span class="gray">可选择多个乘机人</span></p>
+
+		<div class="ticketinfo-bg-list">
+			<div id="cjrlist">
+					
+			</div>
+		</div>
+
+		<div class="bluebtn mag20" id="gqstep1btn">确认变更申请</div>
+		
+		<script type="text/javascript" src="${appPath}/resource/js/jquery/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="${appPath}/resource/js/touch/tool.js?v=1.0"></script>
+		<script src="${appPath}/resource/js/layer/layer.m.js" ></script>
+		<script src="${appPath}/resource/js/touch/touch.js?v=6.0" ></script>
+		<script type="text/javascript">
+			sessionStorage.orderId = getQueryString("orderId");
+			sessionStorage.jsessionid = getSessionId();
+			var obj_ajax = {}; 
+		
+			$(function(){
+			  	
+				Init_gqsq();//调用方法集合
+		
+			});
+			
+
+			
+			
+			
+		</script>
+		
+	</body>
+</html>
